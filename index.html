@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushant - A Creative Front-end Developer & UI/UX Designer</title>
+    <title>Sushant - A Creative Front-end Developer & Quality Assurance</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
+    <!-- <header>
         <div class="logo">
             <a href="#home">  
                 <span class="logo-text">Sushant</span>
@@ -34,13 +35,48 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-    </header>
+    </header> -->
+    <header class="navbar-container">
+    <nav class="navbar">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="brand">
+       <span class="logo-box">S</span>
+        <span class="brand-name">Sushant</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Theme Toggle Button -->
+      <!-- <button class="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="sun"></i>
+      </button> -->
+    </nav>
+    
+  </header>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <div class="subtitle">
+      <span class="line"></span>
+      <span class="subtitle-text">Quality Assurance Opportunities Searching</span>
+    </div>
             <h3 class="hero-greeting">Hello, I'm Sushant Khadka,</h3>
-            <h1 class="hero-title">Front-End Developer & Graphics Designer.</h1>
+            <h1 class="hero-title">Front-End Developer & Quality Assurance.</h1>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-outline">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
                  <button class="cta-button" id="downloadCV">Download CV</button> 
@@ -50,6 +86,7 @@
             </div>
         </div>
         <img src="Sushant_portfolio_images/profile.png" alt="Creative Design Illustration" class="hero-image">
+        <!-- <div class="bg-shape orange-shape"></div> -->
     </section>
 
     <!-- About Section -->
@@ -74,6 +111,10 @@
             </div>
         </div>
         <div class="about-content">
+            <div class="subtitle">
+      <span class="line"></span>
+      <span class="subtitle-text">About Me</span>
+    </div>
             <h2 class="about-title">👋Hey there!</h2>
             <p class="about-desc">Creative and detail-oriented Graphic & UI/UX Designer with front-end development expertise.<br><br><br>
                 Skilled in transforming complex ideas into visually engaging, user-friendly digital experiences. Proficient in tools like Adobe Photoshop, Figma, Canva, and Adobe Illustrator for design, with hands-on development skills in HTML, CSS, JavaScript, and responsive frameworks.<br><br><br>
@@ -89,24 +130,172 @@
 
     <!-- Skills Section -->
     <section class="skills-section">
-    <h2 class="section-title" id="skills">My Skills</h2>
-    
-    <div class="skills-container">
-    <div class="skills-list">
+        <div class="skills-container">
+           
+   
+    <!-- <div class="skills-container"> -->
+    <!-- <div class="skills-list">
       <div class="skill-item"><span>01.</span> HTML & CSS</div>
       <div class="skill-item"><span>02.</span> JavaScript</div>
       <div class="skill-item"><span>03.</span> Bootstrap</div>
       <div class="skill-item"><span>04.</span> Canva</div>
       <div class="skill-item"><span>05.</span> Git & GitHub</div>
       <div class="skill-item"><span>06.</span> Figma</div>
-      <div class="skill-item"><span>07.</span> Adobe Photoshop</div>
-      <div class="skill-item"><span>08.</span> Adobe Illustrator</div>
+      <div class="skill-item"><span>07.</span> Jira</div>
+      <div class="skill-item"><span>08.</span> SDLC Methodology</div>
+    </div> -->
+
+
+    <!-- Main Title -->
+     <div class="subtitle">
+      <span class="line"></span>
+      <span class="subtitle-text">Contact Me</span>
     </div>
+    <h2 class="title">My Skills</h2>
+
+    <!-- Description -->
+    <p class="description">
+      I use these skills and tools across my QA projects, from manual & functional testing to API testing, database testing, automation, performance testing, & CI/CD.
+    </p>
+
+    <div class="container">
+    
+    <!-- Card 1 -->
+    <div class="card">
+      <h2>Testing</h2>
+      <ul>
+        <li>Manual Testing</li>
+        <li>Functional Testing</li>
+        <li>Regression Testing</li>
+        <li>API Testing</li>
+        <li>Database Testing</li>
+        <li>Performance Testing</li>
+        <li>Black Box Testing</li>
+        <li>White Box Testing</li>
+        <li>Monkey Testing</li>
+      </ul>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h2>Automation</h2>
+      <ul>
+        <li>Selenium</li>
+        <li>Python</li>
+        <li>UI Automation</li>
+        <li>API Automation</li>
+      </ul>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h2>API & Database</h2>
+      <ul>
+        <li>Postman</li>
+        <li>REST APIs</li>
+        <li>CRUD Testing</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <h2>Tools</h2>
+      <ul>
+        <li>Jmeter</li>
+        <li>Jira & Kanban</li>
+        <li>Git & Github</li>
+        <li>Vs Code</li>
+        <li>Pycharm</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Methodologies</h2>
+      <ul>
+        <li>Agile</li>
+        <li>Scrum</li>
+        <li>Waterfall</li>
+        <li>V-Model</li>
+        <li>SDLC</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Communication</li>
+        <li>Problem-Solving</li>
+        <li>Teamwork</li>
+        <li>Adaptability</li>
+      </ul> 
+    </div>
+
+    <div class="card">
+      <h2>Web Development</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express</li>
+      </ul>
+    </div>
+
   </div>
+  <!-- </div> -->
   </section>
 
+
+<!--Education Section -->
+  <section class="education-section">
+    <!-- Subtitle with line -->
+    <div class="subtitle">
+      <span class="line"></span>
+      <span class="subtitle-text">Education</span>
+    </div>
+
+    <!-- Main Title -->
+    <h2 class="title">Academic Foundation</h2>
+
+    <!-- Description -->
+    <p class="description">
+      A strong foundation in computer applications, software<br>
+      development, & technology.
+    </p>
+
+    <!-- Content Card -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="degree-title">Bachelor of Computer Applications (BCA)</h3>
+        <p class="college-name">Kathmandu BernHardt College</p>
+        <p class="location">Bafal, Kathmandu</p>
+      </div>
+
+      <div class="card-footer">
+        <span class="duration">2021 &ndash; 2025</span>
+        <!-- <span class="cgpa">CGPA: 3.19 / 4.00</span> -->
+      </div>
+    </div>
+<br><br><br>
+    <!-- +2 Section -->
+      <div class="card">
+      <div class="card-header">
+        <h3 class="degree-title">+2 Management</h3>
+        <p class="college-name">Kathmandu BernHardt College</p>
+        <p class="location">Balkhu, Kathmandu</p>
+      </div>
+
+      <div class="card-footer">
+        <span class="duration">2018 &ndash; 2020</span>
+        <!-- <span class="cgpa">CGPA: 3.19 / 4.00</span> -->
+      </div>
+    </div>
+  </section>
+
+
     <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- <section class="services" id="services">
         <h2 class="section-title">MY SERVICES</h2>
         <div class="services-grid">
             <div class="service-card web-design">
@@ -136,11 +325,11 @@
             </div>
         </div>
        
-    </section>
+    </section> -->
 
    
     <!-- Portfolio Section image size recommended 1200 × 900 px (4:3 ratio) -->
-<section class="portfolio" id="portfolio">
+<!-- <section class="portfolio" id="portfolio">
     <h2 class="section-title">My Recent Work</h2>
     <div class="portfolio-grid">
         <div class="portfolio-item" data-project="graphics Design">
@@ -161,12 +350,16 @@
                 <div class="portfolio-category">Maze Generator</div>
             </div>
         </div>
-</div>
+</div> -->
     <!-- Expandable case study container -->
    
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
+        <div class="subtitle">
+      <span class="line"></span>
+      <span class="subtitle-text">Contact Me</span>
+    </div>
         <div class="contact-container">
             <div class="contact-form">
                 <h3>Get in touch</h3>
@@ -336,7 +529,7 @@
 
 <script>
    document.getElementById('downloadCV').addEventListener('click', function() {
-  window.open('Sushant_Khadka_Resume.pdf', '_blank');
+  window.open('Sushant Khadka Resume.pdf', '_blank');
 });
 
   </script>
