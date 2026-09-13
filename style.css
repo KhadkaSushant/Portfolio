@@ -37,7 +37,7 @@
         }
 
         /* Header & Navigation */
-        /* header {
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -47,7 +47,11 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background-color: var(--bg-color);
+            /* background-color: var(--bg-color); */
+            background-image: 
+    radial-gradient(at 20% 20%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(147, 51, 234, 0.15) 0px, transparent 50%);
+    backdrop-filter: blur(50px);
             transition: background-color 0.3s ease;
         }
 
@@ -75,7 +79,29 @@
 
         nav ul li a:hover, nav ul li a.active {
             color: var(--primary-color);
-        }*/
+        }
+
+       nav ul li a {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  height: 2px;
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}
 
         .cta-button {
             background-color: var(--primary-color);
@@ -527,6 +553,7 @@
       /* border-radius: 12px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); */
       margin: 100px auto;
+      width: 95%;
     }
 
     .skills-list {
@@ -609,12 +636,13 @@
 
     .card li::before {
       content: "•";
-      color: #38bdf8;
+      color: var(--primary-color);;
       font-weight: bold;
       font-size: 1.2rem;
       margin-right: 0.75rem;
     }
     
+
 /* Keep your existing portfolio styles and add these new ones */
 /* Case Study Container */
 .case-study-container {
@@ -1466,6 +1494,7 @@ nav .logo,
   border-radius: 12px;
   padding: 2.5rem 2.5rem 2rem 2.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  
 
 }
 
@@ -1527,3 +1556,243 @@ nav .logo,
     gap: 0.5rem;
   }
 }
+
+
+/* Experience Section Styles */
+/* Container */
+        .experience-container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Section Header */
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-tag {
+            color: #10b981;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 2.25rem;
+            color: #cbd5e1;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            color: #94a3b8;
+            max-width: 540px;
+        }
+
+        /* Timeline Layout */
+        .timeline {
+            position: relative;
+            border-left: 2px solid rgba(16, 185, 129, 0.2);
+            margin-left: 16px;
+            padding-left: 28px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Timeline Dot */
+        .timeline-dot {
+            position: absolute;
+            left: -37px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #10b981;
+            border: 2px solid #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-dot-inner {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #10b981;
+        }
+
+        /* Experience Card */
+        .experience-card {
+            background-color: #1f2937;
+            border: 1px solid #2d3748;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 16px;
+        }
+
+        .role-type {
+            color: #10b981;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .role-meta {
+            text-align: right;
+            font-size: 0.875rem;
+        }
+
+        .role-date {
+            display: block;
+            color: #94a3b8;
+        }
+
+        .role-location {
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+
+        .role-title {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .company-name {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .card-summary {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+        }
+
+        /* Task List */
+        .tasks-container {
+            margin-bottom: 24px;
+        }
+
+        .tasks-heading {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .tasks-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tasks-list li {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .tasks-list li::before {
+            content: "•";
+            color: #10b981; /* Green bullet */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Tech Badges */
+        .tech-container {
+            margin-bottom: 32px;
+        }
+
+        .tech-heading {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* Certificate Button */
+        .btn-certificate {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--bg-tag);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-certificate:hover {
+            background-color: #222e4d;
+        }
+
+        .btn-certificate svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Responsive Design adjustments */
+        @media (max-width: 640px) {
+            .card-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .role-meta {
+                text-align: left;
+            }
+            .experience-card {
+                padding: 20px;
+            }
+        }

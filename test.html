@@ -1,51 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education Section</title>
-  <style>/* Reset & Base Styles */
-.navbar {
-  /* Position fixed or sticky so content scrolls underneath */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  /* Glassmorphism styling */
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
-  backdrop-filter: blur(12px);          /* Blurs elements behind the navbar */
-  -webkit-backdrop-filter: blur(12px);  /* Safari support */
-
-  /* Glass edge details */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
-  /* Layout spacing */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
- </style>  <!-- Google Fonts for Typography matching -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Section</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<nav class="navbar">
-  <div class="logo">Brand</div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<body class="bg-[#0b0f17] text-gray-300 font-sans p-6 md:p-12">
 
+    <div class="max-w-4xl mx-auto">
+        <!-- Section Header -->
+        <div class="mb-12">
+            <span class="text-emerald-500 font-semibold text-xs tracking-widest uppercase">Experience</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4 font-serif">My Experience</h2>
+            <p class="text-gray-400 text-sm md:text-base max-w-xl">
+                My experience in QA and software development has given me a strong technical foundation for understanding, testing, and improving web applications.
+            </p>
+        </div>
 
+        <!-- Timeline Container -->
+        <div class="relative border-l border-emerald-900/50 ml-4 md:ml-6 space-y-12">
+
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-8 md:pl-10">
+                <!-- Timeline Node Circle -->
+                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#0b0f17] border-2 border-emerald-500 flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-[#131b2e] border border-gray-800/80 rounded-2xl p-6 md:p-8 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+                        <span class="text-emerald-400 text-xs font-bold tracking-wider uppercase">Trainee</span>
+                        <div class="text-right text-xs md:text-sm text-gray-400">
+                            <span class="block">Jul 2026 – Sep 2026</span>
+                            <span class="text-gray-500">Sankhamul, Kathmandu</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl font-bold text-white">QA Trainee</h3>
+                    <p class="text-gray-400 text-sm font-medium mb-6">Skill Shikshya</p>
+
+                    <p class="text-gray-300 text-sm mb-6">
+                        Gained hands-on experience in software testing through practical QA tasks and real-world projects.
+                    </p>
+
+                    <!-- What I worked on -->
+                    <div class="mb-6">
+                        <h4 class="text-white text-sm font-semibold mb-3">What I worked on</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Designed and executed test cases for web applications.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Performed functional, regression, and UI testing.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Tested REST APIs using Postman.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Created UI automation tests using Cypress and JavaScript.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Performed database testing using SQL and DBeaver.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Performed performance testing using JMeter.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Reported and tracked defects using Jira.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Worked on Chairlyo CRM as a QA project.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Used Git and GitHub for version control and collaboration.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1">•</span>
+                                <span>Set up CI/CD workflows using GitHub Actions.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-8">
+                        <h4 class="text-white text-sm font-semibold mb-3">Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">Manual Testing</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">Postman</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">Cypress</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">JavaScript</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">SQL</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">JMeter</span>
+                            <span class="px-3 py-1 bg-[#1a233a] border border-gray-700/60 text-gray-300 text-xs rounded-md">Jira</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div>
+                        <a href="#" class="inline-flex items-center gap-2 px-4 py-2 bg-[#1a233a] hover:bg-[#222e4d] border border-gray-700/60 text-white text-sm font-medium rounded-lg transition-colors">
+                            View Certificate
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 (Preview) -->
+            <div class="relative pl-8 md:pl-10">
+                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#0b0f17] border-2 border-emerald-500 flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                </div>
+                <div class="bg-[#131b2e] border border-gray-800/80 rounded-2xl p-6 md:p-8 shadow-xl opacity-80">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+                        <span class="text-emerald-400 text-xs font-bold tracking-wider uppercase">Internship</span>
+                        <div class="text-right text-xs md:text-sm text-gray-400">
+                            <span class="block">Dec 2024 – Feb 2025</span>
+                            <span class="text-gray-500">Bharatpur, Chitwan</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white">Laravel Backend Developer Intern</h3>
+                    <p class="text-gray-400 text-sm font-medium">Akshyaraanga Sanjaal Pvt. Ltd.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
