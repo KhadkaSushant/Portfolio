@@ -3,84 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Image Slideshow</title>
+    <title>Aashika Panta - QA & Software Testing</title>
+    <!-- Google Fonts for Serif & Sans-Serif styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-   .about-image {
-    position: relative;
-    width: 350px; /* Adjust based on your layout */
-    height: 450px;
-    margin: 50px auto;
+        /* CSS Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styling for your mint background shape */
-.bg-shape.mint-shape {
-    position: absolute;
-    top: -20px;
-    left: -20px;
+:root {
+    --bg-color: #0b0d10;
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent-green: #22c55e;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* Background Grid Effect */
+.hero-section {
     width: 100%;
-    height: 100%;
-    background-color: #a8f5e7; /* Mint color */
-    border-radius: 20px;
-    z-index: 1;
+    padding: 40px;
+    background-image: 
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 80px 80px;
+    display: flex;
+    justify-content: center;
 }
 
-/* Styling for the changing profile image */
-.about-image img {
+/* Layout Container */
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Content Styles */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.badge .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-green);
+}
+
+/* Typography */
+h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+h1 .italic-text {
+    font-style: italic;
+    color: #d1fae5; /* Soft greenish-white tint */
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #f3f4f6;
+    color: #0b0d10;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Right Image Area & Arch Mask */
+.hero-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+}
+
+.arch-frame {
+    width: 100%;
+    max-width: 420px;
+    height: 520px;
+    /* Creates the arch shape: top-left, top-right, bottom-right, bottom-left rounded corners */
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    background-color: #1f2937;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.arch-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
-    z-index: 2; /* Keeps image on top of the mint shape */
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-    
-    /* Smooth fade transition */
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
+    object-position: center;
 }
 
-/* Class triggered by JS to handle the fade effect */
-.about-image img.fade-out {
-    opacity: 0;
+.image-caption {
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    font-weight: 500;
 }
-</style>
+
+/* Responsive Design for smaller screens */
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+    </style>
 </head>
 <body>
 
-    <div class="about-image">
-    <div class="bg-shape mint-shape"></div>
-    <!-- Added id="profile-img" for JavaScript targeting -->
-    <img id="profile-img" src="Sushant_portfolio_images/profile 1.jpg" alt="Designer Profile">
-</div>
+    <main class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Left Content Area -->
+            <div class="hero-content">
+                <!-- Status Badge -->
+                <div class="badge">
+                    <span class="dot"></span> Open to QA opportunities
+                </div>
 
-    <!-- <script src="script.js"></script> -->
-    <script>
-    // Array containing the paths to your different profile pictures
-const images = [
-    "Sushant_portfolio_images/profile 1.jpg",
-    "Sushant_portfolio_images/profile 2.jpg",
-    "Sushant_portfolio_images/profile 3.jpg"
-];
+                <!-- Main Heading -->
+                <h1>
+                    Quality Assurance <br>
+                    focused on quality <br>
+                    <span class="italic-text">users can trust.</span>
+                </h1>
 
-let currentIndex = 0;
-const imgElement = document.getElementById("profile-img");
+                <!-- Subtitle Description -->
+                <p class="description">
+                    I'm Aashika — a BCA graduate focused on quality assurance and software testing. I enjoy exploring applications, identifying bugs, writing test cases, testing APIs, and building automated tests to help deliver reliable software.
+                </p>
 
-function changeImage() {
-    // 1. Trigger fade-out effect
-    imgElement.classList.add("fade-out");
+                <!-- Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">
+                        View my work <span class="arrow">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get in touch
+                    </a>
+                    <a href="#cv" class="btn btn-outline">
+                        View CV <span class="icon">📄</span>
+                    </a>
+                </div>
+            </div>
 
-    setTimeout(() => {
-        // 2. Change the image source after the fade-out starts
-        currentIndex = (currentIndex + 1) % images.length;
-        imgElement.src = images[currentIndex];
+            <!-- Right Image Area with Arch Frame -->
+            <div class="hero-image-wrapper">
+                <div class="arch-frame">
+                    <!-- Replace 'your-image.jpg' with your actual image path -->
+                    <img src="your-image.jpg" alt="Aashika Panta Graduation">
+                </div>
+                <div class="image-caption">
+                    AASHIKA PANTA • QA & SOFTWARE TESTING
+                </div>
+            </div>
 
-        // 3. Bring back the opacity (fade-in)
-        imgElement.classList.remove("fade-out");
-    }, 500); // Matches the 0.5s CSS transition time
-}
+        </div>
+    </main>
 
-// Change image every 3 seconds (3000 milliseconds)
-setInterval(changeImage, 3000);
-</script> 
 </body>
 </html>
